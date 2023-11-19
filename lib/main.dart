@@ -86,7 +86,7 @@ Row _buy(String value) {
       children: [
         Icon(Icons.thumb_up_alt),
         Text(
-          "Price " + '${price}',
+          "ChangeIn24Hrs: " + '${price} %',
           style: TextStyle(color: Colors.green),
         )
       ],
@@ -96,7 +96,7 @@ Row _buy(String value) {
       children: [
         Icon(Icons.thumb_down_alt),
         Text(
-          "Price " + '${price}',
+          "ChangeIn24Hrs: " + '${price} %',
           style: TextStyle(color: Colors.redAccent),
         )
       ],
@@ -123,7 +123,7 @@ Widget _tile(int index) {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(data[index]['priceUsd']),
+        Text('Price ' + data[index]['priceUsd']),
         _buy(data[index]['changePercent24Hr']),
       ],
     ),
